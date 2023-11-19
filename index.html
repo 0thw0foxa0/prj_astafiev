@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./src/btn_scroll/scroll.css">
+    <link rel="stylesheet" href="/src/nav_btns/nav.css">
+   
+    <title>Document</title>
+</head>
+<body class=" " >
+    <div class="scroll_panel">
+	<a href="#" id="scroll_top"><span>↑ Наверх</span></a>
+	<a href="#" id="scroll_bottom"><span>↓ Вниз</span></a>
+</div>
+ <section class="  w-screen h-screen bg-center bg-no-repeat bg-[url('/img/main.PNG')] bg-cover">
+    <div class="h-4/6 w-screen flex items-center" id="background_div">
+        <!-- <img class="  h-full w-2/3 object-fill" src="img/main.PNG"  alt=""> -->
+        <div class=" absolute  px-4 py-3 bg-gray-500/50 w-full text-center">
+            <p class="text-center text-[8vh]">Астафьев век спустя</p>   </div>
+        </div>
+ </section>
+
+ <section class=" w-screen h-screen bg-[#faf4e4]">
+    <div class=" flex h-1/5 w-screen items-center justify-center ">
+        <div class="w-[30%]">
+            <p class=" text-left"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, aliquam provident? Officia, adipisci, error voluptate pariatur maxime sapiente minus repellendus eaque facere, repellat earum exercitationem nobis fugiat neque. Qui, culpa.</p>
+        </div>
+        <div class=" w-[30%]">
+            <p class="text-right"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam illo quas aperiam est. Voluptates aliquam illo, suscipit, eligendi, dolores cum vel reiciendis esse laborum quia minus! Neque saepe ipsam nisi!</p>
+        </div>
+    </div>
+ 
+     <!-- <div class="hover-text-one">
+        <figure class="effect-text-three">
+          <img src="/img.jpg" alt=""/>
+            <figcaption>
+          <h3>Lorem ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+            </figcaption>			
+        </figure>
+      </div>  -->
+    <div class=" flex h-3/5 justify-center w-screen bg-[#000000]  py-20" >
+
+        <div class="h-[30vh] w-[25vw]  ">
+            <div class="hover-text-one">
+            <a href="subpages/bio.html" class="h-full w-full inline-block">
+                 <figure class="effect-text-three h-[100%]">
+                    <img class="h-[100%] w-[100%] px-5" src="/img/btn_bio.PNG" alt="">
+                    <figcaption>
+                        <h3>Астафьев в сибири</h3>
+                        <p>Литературные места и архивные фото исторических мест писателя</p>
+                    </figcaption>
+                </figure> 
+             </a>
+            </div>
+        </div>
+
+        <div class="h-[30vh] w-[25vw] px-3  ">
+            <div class="hover-text-one h-full">
+            <a href="subpages/creativy.html" class="h-full w-full inline-block">
+                <figure class="effect-text-three h-[100%]">
+               <img class="h-[100%] w-[100%] px-5 object-cover" src="/img/btn_creativy.PNG" alt="">     
+               <figcaption>
+                <h3>Астафьев в литературе</h3>
+                <p>Популярные произведения писателя</p>
+               </figcaption>
+                </figure>
+
+            </a>
+            </div>
+        </div>
+
+        <div class="h-[30vh] w-[25vw] px-3  ">
+            <div class="hover-text-one h-full">
+            <a href="subpages/podcast.html" class="h-full w-full inline-block">
+                <figure class="effect-text-three h-[100%] w-[100%]">
+               <img class="h-[100%] w-[100%] px-5 object-cover" src="/img/btn_podcast.PNG" alt="">     
+               <figcaption>
+                <h3>Астафьев в историях</h3>
+                <p>Подкасты героев из известных произведений Астафьева</p>
+               </figcaption>
+                </figure>
+
+            </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="w-full h-1/5 place-items-end">
+<p class="text-left align-text-bottom "> О нанас</p>
+    </div>
+ </section>
+ <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+<script>
+
+$(function(){
+	$('#scroll_top').click(function(){
+		$('html, body').animate({scrollTop: 0}, 1000);
+        document.getElementById("scroll_bottom").style.display = "block";
+        document.getElementById("scroll_top").style.display = "none";
+		return false;
+	});
+	
+	$('#scroll_bottom').click(function(){
+		$('html, body').animate({scrollTop: $(document).height() - $(window).height()}, 1000);
+        document.getElementById("scroll_top").style.display = "block";
+        document.getElementById("scroll_bottom").style.display = "none";
+		return false;
+	});
+});
+</script>
+</body>
+</html>
